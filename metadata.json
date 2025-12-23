@@ -1,0 +1,7 @@
+{
+  "name": "VisionQuest: Intelligent Image Analyzer",
+  "description": "A powerful image recognition dashboard that processes multiple images using Gemini's advanced vision capabilities to identify objects, themes, and detailed descriptions.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

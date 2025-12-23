@@ -1,0 +1,18 @@
+services:
+  vision-quest:
+    build:
+      context: .
+      args:
+        - API_KEY=${API_KEY}
+    image: vision-quest-alpine:latest
+    ports:
+      - "8080:80"
+    environment:
+      - API_KEY=${API_KEY}
+    restart: unless-stopped
+    # Healthcheck to ensure the container is running smoothly
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
